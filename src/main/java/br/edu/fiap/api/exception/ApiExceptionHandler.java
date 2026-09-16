@@ -19,13 +19,13 @@ public class ApiExceptionHandler {
     }
 
     /**
-     * Converte a ausência de um produto em {@code 404 Not Found}.
+     * Converte a ausência de um recurso em {@code 404 Not Found}.
      *
      * @param erro exceção lançada pela camada de aplicação
      * @return corpo de erro padronizado
      */
-    @ExceptionHandler(ProdutoNaoEncontradoException.class)
-    ResponseEntity<Map<String, Object>> naoEncontrado(ProdutoNaoEncontradoException erro) {
+    @ExceptionHandler({ProdutoNaoEncontradoException.class, CategoriaNaoEncontradaException.class})
+    ResponseEntity<Map<String, Object>> naoEncontrado(RuntimeException erro) {
         return resposta(HttpStatus.NOT_FOUND, erro.getMessage());
     }
 
