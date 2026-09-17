@@ -55,6 +55,13 @@ export DB_URL='jdbc:postgresql://HOST:5432/DATABASE?sslmode=require'
 export DB_USER='USUARIO_COPIADO_DO_SUPABASE'
 export DB_PASSWORD='SUA_SENHA_DO_SUPABASE'
 ```
+Com arquivo .env:
+
+```
+set -a
+source .env
+set +a
+```
 
 Windows PowerShell:
 

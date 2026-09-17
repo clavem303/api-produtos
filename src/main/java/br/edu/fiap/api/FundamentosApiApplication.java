@@ -8,7 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class FundamentosApiApplication {
-    /** Classe utilitária de inicialização; não deve ser instanciada. */
+    /**
+     * Classe utilitária de inicialização; não deve ser instanciada.
+     */
     private FundamentosApiApplication() {
     }
 
